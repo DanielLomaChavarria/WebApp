@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'rest_framework',
+    'rest_api',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -80,8 +83,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/xe',
-        'USER': 'c##prueba',
+        'USER': 'c#prueba',
         'PASSWORD': 'prueba',
+        'HOST': '10.211.55.4',
+        'PORT': '1521',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
