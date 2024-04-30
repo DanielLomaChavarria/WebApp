@@ -5,8 +5,6 @@ from . import views
 urlpatterns = [
     path('', index, name="index"),
     path('videojuegos/', videojuegos, name="videojuegos"),
-    path('sesion/', sesion, name="sesion"),
-    path('registrate/', registrate, name="registrate"),
     path('vermas/', vermas, name="vermas"),
     path('foro/', foro, name="foro"),
     path('registrate/', registrate, name="registrate"),
@@ -16,7 +14,6 @@ urlpatterns = [
     path('ver-perfil/', views.ver_perfil, name='ver_perfil'),
     path('editar_perfil/', views.editar_perfil, name='editar_perfil'),
     path('crear-perfil/', views.crear_perfil, name='crear_perfil'),
-    path('editar-perfil/', views.editar_perfil, name='editar_perfil'),
     
 
 ]   

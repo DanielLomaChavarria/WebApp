@@ -12,6 +12,7 @@ from .forms import PerfilForm
 from .models import Perfil
 
 
+import requests
 
 # Create your views here.
 def index (request):
@@ -129,3 +130,15 @@ def editar_perfil(request):
     else:
         form = PerfilForm(instance=perfil)
     return render(request, 'core/editar_perfil.html', {'form': form})
+
+
+
+
+    url= "https://rickandmortyapi.com/api/character"
+    response = requests.get(url)
+    personajes = response.json().get('results',[])
+
+    context = {
+        'personajes' : personajes
+    }
+    return render(request, 'core/form_api_back.html',context)
